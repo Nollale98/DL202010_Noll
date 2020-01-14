@@ -68,14 +68,14 @@
 
 \section*{Summary}
 
-Type the summary of your experiment and results here.  
+The report served as a practice exercise in utilizing the various tools and functions within LaTeX and GitHub. The report used figures (trimmed and non-trimmed), table, numbered lists, and code incusion from LaTeX. From GitHub, an account and repository was created, and commiting and pushing was practiced.
 
 
 \section*{Q\&A}
 
 \begin{enumerate}
 	\item Nollale98
-	\item The itemized envirmonment will create a bulleted list.
+	\item The \textit{itemized} envirmonment will create a bulleted list.
 	\item $ y(t) = \frac{1}{2} e^t$
 	\item F6
 \end{enumerate}
@@ -84,17 +84,22 @@ Type the summary of your experiment and results here.
 \section*{Results}
 
 \begin{table}[ht]\centering\caption{Base Conversion Examples}\label{tbl:example_table}\begin{tabular}{c|c|c}\toprule Binary & Hex & Decimal \\\midrule0000 & 0 & 0 \\0010 & 2 & 2 \\0100 & 4 & 4 \\0110 & 6 & 6 \\1000 & 8 & 8 \\1010 & A & 10 \\\bottomrule\end{tabular} \end{table}
+\clearpage
 
 \begin{figure}[ht]\centering
-	\includegraphics[width=1\textwidth,trim=18cm 15.5cm .5cm 4.5cm,clip]{lab1_example_screenshot} \caption{Example of a simulation waveform} 
-	
-	\label{fig:example_sim}
+	\includegraphics[width=1\textwidth,trim=18cm 15.5cm .5cm 4.5cm,clip]{lab1_example_screenshot} \caption{Example of a simulation waveform.} 
 	
 \end{figure}	
 
+\begin{figure}[ht]\centering
+	\includegraphics[width=1\textwidth]{Git_Screenshot} \caption{Screenshot of Github Push post trim and clip.}
+	
+\end{figure}	
+\clearpage
+
 \section*{Code}
 
-Include all of the code you wrote or modified here.
+\subsection*{File Inclusion}\Verilog[caption=File-included Verilog code example,label=code:file_ex]{lab1_example_code.sv}
 
 
 \end{document}
