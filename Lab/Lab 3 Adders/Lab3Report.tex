@@ -99,7 +99,7 @@ OR or XOR gates can used to add carry bits. We should use XOR gates as they mini
 
 \begin{table}[!htb]\centering\caption{Carry Bit Addition Truth Table}\label{tbl:example_table}\begin{tabular}{c|c|c|c|c}\toprule Cin & Half Adder Sum (S) & S*Cin (X) & C & Cout(S XOR C) \\\midrule0 & 0 & 0 & 0 & 0  \\0 & 1 & 0 & 0 & 0 \\0 & 0 & 0 & 1 & 1 \\1 & 0 & 0 & 0 & 0 \\1 & 1 & 1 & 0 & 1 \\1 & 0 & 0 & 1 & 1 \\\bottomrule\end{tabular} \caption{The Truth Table demonstrates through exhaustive proof that no matter the inputs both carry digits X and C will never both be 1 and the XOR gate can always add them as an OR gate would.*}
 
-* Two repeated lines in the truth table were omitted as they only exist as a consequence of the intermediate carry bit, C, being unable to be 1 when S=1 and visa versa. This is due to S being the result of an AND gate of only two one-bit inputs and thus the largest binary out is 10. The rightmost bit being the carry bit C, and the leftmost bit being S. 
+* Two repeated lines in the truth table were omitted as they only exist as a consequence of the intermediate carry bit, C, being unable to be 1 when S=1 and visa versa. This is due to S being the result of an addition of only two one-bit inputs and thus the largest binary out is 10. The rightmost bit being the carry bit C, and the leftmost bit being S. 
 \end{table}
 
 \end{document}
