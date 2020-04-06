@@ -21,18 +21,15 @@
 
 
 module top_lab9(
-    input wire [11:0] switches,
-    input wire btnU, wire btnD, wire btnC, reg clk,
-    output wire [15:0] led
+    input [11:0] sw,
+    input btnU, btnD, btnC, reg clk,
+    output [15:0] led
     );
     wire [7:0] ALUout;
-always  begin
-    clk = ~clk; #5;
-end   
-    
-register #(.N(8)) REG1(.D(switches[7:0]),.en(btnD),.clk(clk),.rst(btnC),.Q(led[7:0]));
 
-alu #(.N(8)) ALU(.in0(switches[7:0]),.in1(led[7:0]),.op(switches[11:8]),.out(ALUout));
+register #(.N(8)) REG1(.D(sw[7:0]),.en(btnD),.clk(clk),.rst(btnC),.Q(led[7:0]));
+
+alu #(.N(8)) ALU(.in0(sw[7:0]),.in1(led[7:0]),.op(sw[11:8]),.out(ALUout));
 
 register #(.N(8)) REG2(.D(ALUout),.en(btnU),.clk(clk),.rst(btnC),.Q(led[15:8]));
 endmodule

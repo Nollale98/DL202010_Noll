@@ -26,8 +26,6 @@ module register #( parameter N=1)
     input [N-1:0] D,
     output reg [N-1:0] Q
     );
-    
-    
     always@(posedge clk, posedge rst)
 begin
     if(rst)
