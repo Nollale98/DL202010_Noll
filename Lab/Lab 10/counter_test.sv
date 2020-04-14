@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 03/31/2020 09:11:12 PM
+// Create Date: 04/09/2020 11:19:11 PM
 // Design Name: 
-// Module Name: register_test
+// Module Name: counter_test
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,29 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module  register_test ();
-    
-    reg  [3:0] D;
+module counter_test();
     reg clk , en , rst;
-    wire  [3:0] Q;
-    register  #(.N(4)) r(.D(D), .clk(clk),
-    .en(en), .rst(rst), .Q(Q) );
+    wire  [17:0] Q;
+    wire tick;
+    counter  #(.N(18)) r (.clk(clk),
+    .en(en), .rst(rst), .count(Q), .tick(tick));
     
     always  begin
-    clk = ~clk; #1;
+    clk = ~clk; #(0.5);
     end
     
     initial  begin
-        clk=0; en=0;  rst =0; D=4'h0; #7;
+        clk=0; en=0;  rst =0; #3;
         rst = 1; #3;    
-        D = 4'hA; en = 1; rst = 0; #10;
-        D = 4'h3;    #2;
-        en = 0;      #5;
-        en = 1;      #3;
-        D = 4'h0;    #2;
-        en = 0;      #10;
-        en = 1;      #2;
-        D = 4'h6;    #11;
+        en = 1; rst = 0; #6;
+        en = 0;      #3;
+        en = 1;      #6;
+        en = 0;      #3;
+        en = 1;      #(19'b1000000000000000001);
         $finish;
     end
 endmodule
