@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Apr 22 20:38:41 2020
+# Process ID: 15664
+# Current directory: D:/Baylor Classes/Sem 4/Logic Lab/DL202010_Noll/Lab/Lab 10/Lab_10
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18372 D:\Baylor Classes\Sem 4\Logic Lab\DL202010_Noll\Lab\Lab 10\Lab_10\Lab_10.xpr
+# Log file: D:/Baylor Classes/Sem 4/Logic Lab/DL202010_Noll/Lab/Lab 10/Lab_10/vivado.log
+# Journal file: D:/Baylor Classes/Sem 4/Logic Lab/DL202010_Noll/Lab/Lab 10/Lab_10\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Baylor Classes/Sem 4/Logic Lab/DL202010_Noll/Lab/Lab 10/Lab_10/Lab_10.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Vivado/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 725.813 ; gain = 119.184
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 23 10:38:05 2020...
